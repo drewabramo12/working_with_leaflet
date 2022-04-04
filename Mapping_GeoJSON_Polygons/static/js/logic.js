@@ -51,7 +51,7 @@ let myStyle = {
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data) {
     console.log(data, {
-     style: myStyle,
+     myStyle,
       onEachFeature: function(feature, layer) {
         layer.bindPopup("<h3> Airline: " +feature.properties.airline + "</h3> <hr><h3> Destination: " + feature.properties.dst + "</h3>");
       }
