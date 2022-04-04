@@ -35,10 +35,13 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Then we add our 'graymap' tile layer to the map.
+
 light.addTo(map);
+
 
 // Accessing the airport GeoJSON URL
 let airportData = "https://raw.githubusercontent.com/drewabramo12/working_with_leaflet/main/majorAirports.json";
+
 
 let torontoData = "https://raw.githubusercontent.com/drewabramo12/working_with_leaflet/main/torontoRoutes.json";
 
