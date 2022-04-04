@@ -18,16 +18,16 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 
 // Create a base layer that holds both maps.
 let baseMaps = {
-    "Streets": streets,
-    "Satellite": satelliteStreets
+    Streets: streets,
+    Satellite: satelliteStreets
   };
 
 
   // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-    center: [39.5, -98.5],
-    zoom: 3,
-    layers: [streets]
+    center: [43.7, -79.3],
+    zoom: 11,
+    layers: [satelliteStreets]
 })
 
 
@@ -36,6 +36,7 @@ L.control.layers(baseMaps).addTo(map);
 
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
+
 
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
